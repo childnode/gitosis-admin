@@ -3,8 +3,8 @@ Gitosis Administrator
 
 Manage gitosis over CLI- and Web-Interface.
 
-.. image:: https://secure.travis-ci.org/cmuench/n98-gitosis-admin.png
-  :target: https://secure.travis-ci.org/cmuench/n98-gitosis-admin
+.. image:: https://secure.travis-ci.org/childnode/gitosis-admin.png
+  :target: https://secure.travis-ci.org/childnode/gitosis-admin
 
 Installation
 ------------
@@ -46,27 +46,27 @@ List Repositories
 
 .. code-block:: sh
 
-  $ bin/n98-gitosis-admin repo:list
+  $ bin/gitosis-admin repo:list
 
 Add Repository
 """"""""""""""
 
 .. code-block:: sh
 
-  $ bin/n98-gitosis-admin repo:add name [owner] [description] [gitweb] [daemon]
+  $ bin/gitosis-admin repo:add name [owner] [description] [gitweb] [daemon]
 
 Example:
 
 .. code-block:: sh
 
-  $ bin/n98-gitosis-admin repo:add my-repo "John Doe" "My awesome git repository" no no
+  $ bin/gitosis-admin repo:add my-repo "John Doe" "My awesome git repository" no no
 
 Remove Repository
 """""""""""""""""
 
 .. code-block:: sh
 
-  $ bin/n98-gitosis-admin repo:remove name
+  $ bin/gitosis-admin repo:remove name
 
 
 List Groups
@@ -74,42 +74,42 @@ List Groups
 
 .. code-block:: sh
 
-  $ bin/n98-gitosis-admin group:list
+  $ bin/gitosis-admin group:list
 
 Add Group
 """""""""
 
 .. code-block:: sh
 
-  $ bin/n98-gitosis-admin group:add name members [writable] [readonly]
+  $ bin/gitosis-admin group:add name members [writable] [readonly]
 
 Example:
 
 .. code-block:: sh
 
   # Adds the repo "foo" with members "bar, zoz and bla" with write access to "repo1" and read access to "repo2"
-  $ bin/n98-gitosis-admin group:add foo bar,zoz,bla repo1 repo2
+  $ bin/gitosis-admin group:add foo bar,zoz,bla repo1 repo2
 
 Remove Group
 """"""""""""
 
 .. code-block:: sh
 
-  $ bin/n98-gitosis-admin group:remove name
+  $ bin/gitosis-admin group:remove name
 
 Add User to existing Group
 """"""""""""""""""""""""""
 
 .. code-block:: sh
 
-  $  bin/n98-gitosis-admin group:user:add group username
+  $  bin/gitosis-admin group:user:add group username
 
 Remove User from existing Group
 """""""""""""""""""""""""""""""
 
 .. code-block:: sh
 
-  $  bin/n98-gitosis-admin group:user:remove group username
+  $  bin/gitosis-admin group:user:remove group username
 
 
 Remove a user from all groups
@@ -117,7 +117,7 @@ Remove a user from all groups
 
 .. code-block:: sh
 
-  $ bin/n98-gitosis-admin user:remove username
+  $ bin/gitosis-admin user:remove username
 
 List all existing users
 """""""""""""""""""""""
@@ -126,21 +126,21 @@ Lists all users across all groups.
 
 .. code-block:: sh
 
-  $  bin/n98-gitosis-admin user:list
+  $  bin/gitosis-admin user:list
 
 Allow group write acccess to repository
 """""""""""""""""""""""""""""""""""""""
 
 .. code-block:: sh
 
-  $ bin/n98-gitosis-admin group:repo:add:writable
+  $ bin/gitosis-admin group:repo:add:writable
 
 Allow group readonly acccess to repository
 """"""""""""""""""""""""""""""""""""""""""
 
 .. code-block:: sh
 
-  $ bin/n98-gitosis-admin group:repo:add:readonly
+  $ bin/gitosis-admin group:repo:add:readonly
 
 Web Interface
 =============
